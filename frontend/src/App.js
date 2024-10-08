@@ -23,7 +23,7 @@ axios.defaults.withCredentials = true;
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <DataProvider>
         <Routes>
           {/* Isolated login and admin routes */}
