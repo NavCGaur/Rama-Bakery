@@ -12,7 +12,7 @@ const ProtectedRoute = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try { 
-        await axios.get('http://localhost:5000/api/auth/admin', { withCredentials: true });
+        await axios.get('https://rama-bakery.vercel.app/api/auth/admin', { withCredentials: true });
         setLoading(false);
 
       } catch (error) {

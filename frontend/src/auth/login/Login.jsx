@@ -36,7 +36,7 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('https://rama-bakery.vercel.app/api/auth/login', {
         email,
         password,
       });

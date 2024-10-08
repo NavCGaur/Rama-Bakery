@@ -17,7 +17,7 @@ export const DataProvider = ({ children }) => {
 
   const fetchProducts = async () => {
     try {
-      const productResponse = await axios.get('http://localhost:5000/api/products');
+      const productResponse = await axios.get('https://rama-bakery.vercel.app/api/products');
       const formattedProducts = productResponse.data.map(product => ({
         ...product,
         date: new Date(product.date).toLocaleDateString('en-US', {
@@ -39,7 +39,7 @@ export const DataProvider = ({ children }) => {
         await fetchProducts();
 
         // Fetch categories
-        const categoryResponse = await axios.get('http://localhost:5000/api/category');
+        const categoryResponse = await axios.get('https://rama-bakery.vercel.app/api/category');
         setCategories(categoryResponse.data);
 
         setLoading(false);
@@ -57,7 +57,7 @@ export const DataProvider = ({ children }) => {
       setLoading(true);
       // Create an array of update promises
       const updatePromises = updatedProducts.map(product => 
-        axios.put(`http://localhost:5000/api/auth/products/${product.id}`, product)
+        axios.put(`https://rama-bakery.vercel.app/api/auth/products/${product.id}`, product)
       );  
       
       // Wait for all update requests to complete

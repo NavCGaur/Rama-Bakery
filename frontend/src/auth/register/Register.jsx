@@ -34,7 +34,7 @@ const Registration = () => {
 
     try {
       // Call the registration API
-      await axios.post('http://localhost:5000/api/auth/register', formData);
+      await axios.post('https://rama-bakery.vercel.app/api/auth/register', formData);
       setMessage('Registration successful. Redirecting to login...');
       
       // Redirect to login page after success
