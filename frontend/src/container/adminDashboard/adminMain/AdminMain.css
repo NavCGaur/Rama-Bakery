@@ -1,0 +1,80 @@
+.adminmain{
+    height: 100vh;
+
+}
+
+.adminmain__top{
+    height: 4rem;
+    background: brown;
+}
+
+.adminmain__main{
+    display: flex;
+    overflow: hidden;
+}
+
+.adminmain__left{
+    height: 100vh;
+    width: 20%;
+
+    background: #f44940;
+    color: white;
+    font-weight: 500;
+    font-size: 2.2rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+   
+
+}
+
+.adminmain__icon{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    fill: white;
+}
+
+.adminmain__left-Icon{
+    padding-top: 5rem;
+    padding-left: 5rem;
+
+}
+
+.adminmain__left-Icon.active{
+    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+}
+
+.adminmain__right{
+    width: 80%;
+    overflow-y: auto;
+    position: relative;
+    
+}
+
+.adminmain__notAuthenticated{
+    top: 20%;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+    height: 30rem;
+    background-color: bisque;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    position: absolute;
+    border-radius: 15px ;
+    letter-spacing: 0.3px;
+    border: 1px solid rgb(115, 31, 31);
+
+}   
+
+.adminmain__notAuthenticated-link{
+    color: brown;
+    font-weight: 700;
+    text-decoration: underline;
+}

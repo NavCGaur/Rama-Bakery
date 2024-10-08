@@ -1,0 +1,131 @@
+.products{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    display: flex;
+    background: linear-gradient(135deg, #FFF5E1, #FDEFEF);
+
+    font-family: Inter;
+    font-weight: 400;
+    
+    
+    }
+
+.products__topSection{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    color: #cd0951;
+
+}
+
+.products__topSection p{
+    margin-top: 12rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-family: 'Sansita Swashed';
+    letter-spacing: 0.8px;
+    font-size: 3.5rem;
+
+
+}
+.products__bottomSection{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 600;
+    overflow: hidden;
+
+}
+
+.products__bottomSection-left{
+   width: 25%;
+   padding-left: 10%;
+  
+
+}
+
+.products__bottomSection-left :nth-child(1){
+  padding-bottom: 2.5rem;
+ }
+
+ .products__bottomSection-left h3{
+    
+    font-family: Inter;
+    font-weight: 400;
+    padding: 1rem;
+    cursor: pointer;
+ }
+
+
+ .products__category.highlight{
+    font-weight: 800;
+    color:#cd0951;
+    font-family: 'Lato', sans-serif;
+
+    font-size: 2rem;
+    font-style:italic;
+
+}
+
+ .products__bottomSection-right{
+    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+    font-size: 1rem;
+    overflow-y: auto;
+    scrollbar-width: thin;  
+    scrollbar-color: rgba(162, 159, 159, 0.4) rgba(255, 241, 230, 0.1); 
+
+
+ }
+ .products__bottomSection-grid{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+ }
+
+
+ .products__bottomSection-grid img{
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    margin: 10px;
+
+    border-radius: 15px;
+    
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adjust values for desired shadow */
+}
+
+.products__bottomSection-grid p:nth-child(2){
+    font-size: 1.5rem;
+    padding-left: 10px; 
+    color: black;
+}
+
+.products__bottomSection-grid div{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+ 
+ }
+
+ .products__bottomSection-loadMore{
+    width: 100% ;
+    margin-left: 260%;
+    margin-bottom: 4rem;
+    
+}
+
+ .products__bottomSection-loadMore button{
+    height: 3.5rem;
+    width: 16rem;
+    border-radius: 5px;
+    cursor: pointer;
+ }

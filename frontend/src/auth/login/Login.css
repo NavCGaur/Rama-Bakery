@@ -1,0 +1,86 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FAE0C3; /* Cream background */
+  padding: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: #fff8e7; /* Light cream background */
+  border: 1px solid #A154F2;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #9A332E; /* Dark Red */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #9A332E; /* Red border */
+  border-radius: 4px;
+  font-size: 1.8rem;
+}
+
+.submit-button {
+  background-color: #9A332E; /* Red button */
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 2rem;
+}
+
+.submit-button:hover {
+  background-color: #C24A4F;
+}
+
+.forgot-password-link {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #9A332E; /* Link red */
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+  font-size: 2.2rem;
+}
+
+.success-message {
+  background-color: #d4edda; /* Example success background color */
+  color: #155724; /* Example success text color */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  font-size: 2.5rem; /* Increase the text size here */
+  text-align: center; /* Optional: Center-align the text */
+}
+

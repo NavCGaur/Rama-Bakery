@@ -1,0 +1,33 @@
+/* Logout.css */
+.logout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;    
+
+  }
+  
+  .logout-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 2rem 4rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: unset;
+    font-size: 3rem;
+    margin-top: 6rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #5a0404;
+  }
+  
+  .logout-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.5);
+  }

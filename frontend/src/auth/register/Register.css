@@ -1,0 +1,109 @@
+.register__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #FAE0C3;
+    font-family: 'Playfair Display', serif;
+}
+
+.register__formwrapper {
+    background-color: #fff8e7;
+    padding: 1.5rem; /* Reduced padding slightly */
+    border: 1px solid #A154F2;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.register__title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #9A332E;
+}
+
+.register__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+.register__inputgroup-label {
+    margin-bottom: 0rem; /* No margin between label and input */
+    display: block;
+    font-size: 1.5rem;
+}
+
+.register__forminput {
+    border: 1px solid #9A332E;
+    border-radius: 0.25rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem; /* Reduced gap between input fields */
+    padding: 1rem; /* Added some padding inside input for better readability */
+}
+
+.register-inputgroup{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    margin-bottom: 2rem;
+
+}
+.register__inputgroup-label{
+    font-size: 1.5rem;
+    color: rgb(60, 59, 59);
+    margin-bottom: 1rem;
+}
+
+.register__submit-button {
+    background-color: #9A332E;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.register__submit-button:hover {
+    background-color: #C24A4F;
+}
+
+.register__login-link {
+    text-align: center;
+    font-size: 2rem;
+    font-size: 700;
+    color: #9A332E;
+    cursor: pointer;
+}
+
+.register__login-link a{
+    text-align: center;
+    font-size: 2rem;
+    color: #a11008;
+    font-weight: 600;
+
+}
+
+.register__login-link a:hover {
+    text-decoration: underline;
+    font-size: 2.2rem;
+
+  }
+  
+  .register__error-message{
+    font-weight: 400;
+    font-size: 1.5rem;
+
+  }
+
+  .register__login-redirect{
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .register__login-redirectLink{
+    color: #a11008;
+    font-weight: 600;
+    font-size: 2.1rem;
+  }

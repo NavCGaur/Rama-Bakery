@@ -1,0 +1,36 @@
+.dropdown-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+.dropdown__hidden{
+    display: none;
+}
+
+
+.dropdown__visible{
+    position: absolute;
+    z-index: 50;
+    top:60px;
+    right:-90%;
+    list-style: none;
+    backdrop-filter: unset;
+    border-radius: 15px;
+    width: 200px;
+    background-color: rgba(255, 245, 225, 0.9); /* Light cream with transparency */
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.7); /* Adjust values for desired shadow */
+
+
+   }
+
+.dropdown__visible li{
+    padding: 10px;
+
+}
+
+.dropdown__visible li:nth-child(1){
+    padding-top: 25px;
+
+}

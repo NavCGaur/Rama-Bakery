@@ -1,0 +1,58 @@
+.productManagement__table-data{
+    width: 100%;
+}
+
+.productManagement__table-headrow--editing,
+.productManagement__table-data--editing {
+    grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr; 
+}
+.productManagement__table-data .ProductUpdate__checkbox {
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+.productManagement__table-data td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productManagement__table-data .ProductUpdate__image{
+    width: 100px;
+    height: 50px; 
+    object-fit: cover;
+    margin-left: 10rem;
+
+}
+
+.productManagement__table-data .ProductUpdate__table-data--editfield {
+    height: 50%;
+    width: 60%;
+    text-align: center;  
+    position: relative;
+ }
+
+ .productManagement__table-data .ProductUpdate__table-data--editfield  .category{   
+    text-align: left;   
+ }
+
+ .ProductUpdate__table-data--buttons{
+    position: absolute;
+    right: 3.5%;
+    display: flex;
+    flex-direction: column;
+
+
+ }
+
+ .ProductUpdate__table-data--buttons button{
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    background-color: #c9251c;
+    color: white;
+
+ }
+
+ 

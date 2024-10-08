@@ -1,0 +1,73 @@
+.about{
+    height: 100vh;
+    padding-top: 12rem;
+    display: flex;
+    background: linear-gradient(135deg, #FFF5E1, #FDEFEF);
+}
+
+.about__leftSection{
+    margin-top: 10rem;
+    width: 40%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about__leftSection p:nth-child(1), p:nth-child(2){
+    font-size: 7rem;
+    color: #D81B60; /* Keep the pink, but ensure it's dark enough */
+
+    margin-bottom: 1rem;
+
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); 
+
+
+
+}
+
+.about__leftSection p:nth-child(2){
+    
+    margin-bottom: 4rem;
+}
+
+.about__leftSection p:nth-child(3){
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.8px;
+    color: black;
+    font-family:'Open Sans', sans-serif;
+    font-weight: 500;
+    width: 60%;
+    margin-bottom: 6rem;
+}
+
+
+
+.about__rightSection{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+    row-gap: 1.5rem;
+
+    height: 445px;
+
+    padding: 2rem;
+
+}
+
+.about__images{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+   
+}
+
+.about__images img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+
+    border-radius: 15px;
+    
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.7); /* Adjust values for desired shadow */
+}
