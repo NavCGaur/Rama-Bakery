@@ -213,7 +213,7 @@ router.post('/forgot-password', async (req, res) => {
     });
 
     // Compose email
-    const resetUrl = `http://localhost:3000/reset-password/${token}`;
+    const resetUrl = `https://rama-bakery.vercel.app/reset-password/${token}`;
     const mailOptions = {
       to: user.email,
       from: process.env.EMAIL_USER,
