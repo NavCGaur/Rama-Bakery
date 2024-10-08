@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Rama-Bakery/static/css/main.05970dfe.css",
+    "main.js": "/Rama-Bakery/static/js/main.21179ea3.js",
+    "static/js/453.a95dd6e5.chunk.js": "/Rama-Bakery/static/js/453.a95dd6e5.chunk.js",
+    "static/media/logo.png": "/Rama-Bakery/static/media/logo.0a2b321e97226c2da3ac.png",
+    "static/media/landingImage.jpg": "/Rama-Bakery/static/media/landingImage.1360d4a730659e80d10b.jpg",
+    "static/media/about-image-2.jpg": "/Rama-Bakery/static/media/about-image-2.521ec50ddb2e72727bb0.jpg",
+    "static/media/about-image-4.png": "/Rama-Bakery/static/media/about-image-4.449b2ad14326365bfdab.png",
+    "static/media/about-image-3.jpg": "/Rama-Bakery/static/media/about-image-3.b826c7ebe5b4acfc3dca.jpg",
+    "static/media/about-image-1.jpg": "/Rama-Bakery/static/media/about-image-1.1387cb2db5c7e5f1ac13.jpg",
+    "index.html": "/Rama-Bakery/index.html",
+    "static/media/editicon.svg": "/Rama-Bakery/static/media/editicon.84565cd0962ec07e7bfe138a5d5864de.svg",
+    "static/media/homeicon.svg": "/Rama-Bakery/static/media/homeicon.9ae583ec1fd9ce36b21898d6827170a6.svg",
+    "static/media/leftlogouticon.svg": "/Rama-Bakery/static/media/leftlogouticon.24620eabebf6f19032637c5d6aae2153.svg",
+    "static/media/dashboardicon.svg": "/Rama-Bakery/static/media/dashboardicon.445c18a10a7b57b96c9a790c782039c2.svg",
+    "static/media/sorticon.svg": "/Rama-Bakery/static/media/sorticon.85cbf83aedd37be20d86b5f1cfe11648.svg",
+    "static/media/closeicon.svg": "/Rama-Bakery/static/media/closeicon.5201a0614c605c13a36331dfcec5d647.svg",
+    "static/media/deleteicon.svg": "/Rama-Bakery/static/media/deleteicon.073498f4605a229ef0d282c184b81c2b.svg",
+    "static/media/producticon.svg": "/Rama-Bakery/static/media/producticon.53ab4ba287c17fa43dba47cb51d9b5bf.svg",
+    "static/media/search.svg": "/Rama-Bakery/static/media/search.2ec9095c91defdc2d836eb9e39749034.svg",
+    "static/media/addicon.svg": "/Rama-Bakery/static/media/addicon.daf82070bd47c6e6bbd1f0246aed49e4.svg",
+    "static/media/usericon.svg": "/Rama-Bakery/static/media/usericon.3c3ce3f89bb64e810ca13708310f5d79.svg",
+    "main.05970dfe.css.map": "/Rama-Bakery/static/css/main.05970dfe.css.map",
+    "main.21179ea3.js.map": "/Rama-Bakery/static/js/main.21179ea3.js.map",
+    "453.a95dd6e5.chunk.js.map": "/Rama-Bakery/static/js/453.a95dd6e5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05970dfe.css",
+    "static/js/main.21179ea3.js"
+  ]
+}
