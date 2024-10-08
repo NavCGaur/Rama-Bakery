@@ -21,7 +21,7 @@ connectDB();
 
 // CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with your frontend URL
+  origin: 'https://rama-bakery.vercel.app', // Replace with your frontend URL
   credentials: true,
   optionsSuccessStatus: 200
 };
