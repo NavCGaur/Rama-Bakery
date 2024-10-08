@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Rama-Bakery/static/css/main.05970dfe.css",
-    "main.js": "/Rama-Bakery/static/js/main.21179ea3.js",
+    "main.js": "/Rama-Bakery/static/js/main.7224de19.js",
     "static/js/453.a95dd6e5.chunk.js": "/Rama-Bakery/static/js/453.a95dd6e5.chunk.js",
     "static/media/logo.png": "/Rama-Bakery/static/media/logo.0a2b321e97226c2da3ac.png",
     "static/media/landingImage.jpg": "/Rama-Bakery/static/media/landingImage.1360d4a730659e80d10b.jpg",
@@ -22,11 +22,11 @@
     "static/media/addicon.svg": "/Rama-Bakery/static/media/addicon.daf82070bd47c6e6bbd1f0246aed49e4.svg",
     "static/media/usericon.svg": "/Rama-Bakery/static/media/usericon.3c3ce3f89bb64e810ca13708310f5d79.svg",
     "main.05970dfe.css.map": "/Rama-Bakery/static/css/main.05970dfe.css.map",
-    "main.21179ea3.js.map": "/Rama-Bakery/static/js/main.21179ea3.js.map",
+    "main.7224de19.js.map": "/Rama-Bakery/static/js/main.7224de19.js.map",
     "453.a95dd6e5.chunk.js.map": "/Rama-Bakery/static/js/453.a95dd6e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.05970dfe.css",
-    "static/js/main.21179ea3.js"
+    "static/js/main.7224de19.js"
   ]
 }
