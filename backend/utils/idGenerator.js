@@ -1,5 +1,5 @@
 
-const IdCounter = require('../models/IdCounter');
+const IdCounter = require('../models/idCounter');
 
 async function getNextProductId() {
     const counter = await IdCounter.findOneAndUpdate(
