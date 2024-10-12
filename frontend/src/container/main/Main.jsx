@@ -108,6 +108,7 @@ function Main() {
                   {filteredProducts.map(product => (
                   <li key={product.id} onClick={() => handleProductClick(product.id)}>
                     {product.name}
+                    {console.log(product.name)}
                   </li>
                 ))}
               </ul>
