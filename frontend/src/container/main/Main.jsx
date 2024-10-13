@@ -19,7 +19,6 @@ function Main() {
   const { setCategory } = useCategory();
   const navigate = useNavigate();
 
-  // Load the categories in the background
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth > 900) {
@@ -70,7 +69,7 @@ function Main() {
             </a>
             
                {/* Pass loading state to the DropDown */}
-          <DropDown title='PRODUCTS' dropDownData={categories} loading={loading} />
+            <DropDown title='PRODUCTS' dropDownData={categories} loading={loading} />
            
 
             <a className='main__navLinks' href='#contact'>
