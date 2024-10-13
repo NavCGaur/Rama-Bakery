@@ -72,10 +72,7 @@ function Main() {
               OUR STORY
             </a>
 
-            {/* Display the dropdown even if categories are loading */}
-            {categories.length > 0 && (
-              <DropDown title='PRODUCTS' dropDownData={categories} onClick={handleMenu} />
-            )}
+           
 
             <a className='main__navLinks' href='#contact'>
               CONTACT US
