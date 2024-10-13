@@ -72,8 +72,6 @@ function Main() {
               OUR STORY
             </a>
             
-               {/* Pass loading state to the DropDown */}
-          <DropDown title='PRODUCTS' dropDownData={categories} loading={loading} />
            
 
             <a className='main__navLinks' href='#contact'>
