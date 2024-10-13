@@ -72,13 +72,10 @@ function Main() {
               OUR STORY
             </a>
 
-            {/* Render DropDown and check loading status for categories */}
-            <DropDown
-              title={'PRODUCTS'}
-              dropDownData={loading ? [] : categories}
-              onClick={handleMenu}
-              loading={loading}
-            />
+            {/* Display the dropdown even if categories are loading */}
+            {categories.length > 0 && (
+              <DropDown title='PRODUCTS' dropDownData={categories} onClick={handleMenu} />
+            )}
 
             <a className='main__navLinks' href='#contact'>
               CONTACT US
