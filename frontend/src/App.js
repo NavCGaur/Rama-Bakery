@@ -6,6 +6,7 @@ import axios from 'axios';
 
 import './App.css';
 
+import Main from '../src/container/main/Main';
 import About from '../src/container/about/About';
 import Products from '../src/container/products/Products';
 import AdminMain from './container/adminDashboard/adminMain/AdminMain';
@@ -48,6 +49,7 @@ export default App;
 function MainLayout() {
   return (
     <div>
+      <Main />
       <About />
       <Products />
       <Login />

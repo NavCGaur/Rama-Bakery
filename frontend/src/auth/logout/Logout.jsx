@@ -10,7 +10,11 @@ const Logout = () => {
   const navigate = useNavigate();
   const {setIsAuthenticated} = useAuthentication()
 
-  const handleLogout = async () => {
+  const resetAxiosAuth = () => {
+    axios.defaults.headers.common['Authorization'] = '';
+  };
+  
+    const handleLogout = async () => {
     try {
       const response = await axios.post('https://rama-bakery.vercel.app/api/auth/logout', {}, {
         withCredentials: true // Necessary for cookies to be sent with the request
