@@ -9,7 +9,7 @@ import './Main.css';
 import DropDown from '../../components/dropdown/DropDown';
 
 function Main() {
-  const [setMenuStatus] = useState(false);
+  const [ setMenuStatus] = useState(false);
   const [searchStatus, setSearchStatus] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -30,7 +30,7 @@ function Main() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [setMenuStatus]);
 
   useEffect(() => {
     if (searchQuery.length > 0) {

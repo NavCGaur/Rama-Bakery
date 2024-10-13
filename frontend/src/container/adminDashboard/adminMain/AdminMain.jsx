@@ -13,7 +13,6 @@ import {ReactComponent as LogoutIcon} from '../../../assets/leftlogouticon.svg'
 
 import Dashboard from '../dashboard/Dashboard';
 import ProductManagement from '../productManagement/ProductManagement';
-import Logout from '../../../auth/logout/Logout';
 
 
 
@@ -23,7 +22,6 @@ function AdminMain() {
 
   const [handleOption, setHandleOption] = useState(1);
   const {isAuthenticated} = useAuthentication()
-  const { handleLogout } = Logout(); // Import the handleLogout function
   const navigate = useNavigate();
 
 
