@@ -3,7 +3,7 @@ import {useCategories} from '../../../../data-context/DataContext'
 import './ProductUpdate.css'
 
 function ProductUpdate({ product, isEditing, onEdit, onSave, onCancel }) {
-  const {categories, setCategories} = useCategories()
+  const {categories} = useCategories()
   const [editedProduct, setEditedProduct] = useState(product);
 
 

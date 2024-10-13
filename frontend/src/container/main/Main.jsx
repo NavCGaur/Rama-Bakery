@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useProducts, useCategories, useCategory } from '../../data-context/DataContext';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import Logo from '../../assets/logo.png';
 import { ReactComponent as Search } from '../../assets/search.svg';
@@ -9,14 +9,14 @@ import './Main.css';
 import DropDown from '../../components/dropdown/DropDown';
 
 function Main() {
-  const [menuStatus, setMenuStatus] = useState(false);
+  const [setMenuStatus] = useState(false);
   const [searchStatus, setSearchStatus] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
   const { products } = useProducts(); // Use products from context
 
-  const { categories, setCategories, loading, error } = useCategories(); // Fetch categories
-  const { category, setCategory } = useCategory();
+  const { categories, loading} = useCategories(); // Fetch categories
+  const { setCategory } = useCategory();
   const navigate = useNavigate();
 
   // Load the categories in the background
@@ -47,9 +47,6 @@ function Main() {
     setCategory('All Products'); // Update product category when clicked
   }
 
-  function handleMenu() {
-    setMenuStatus(!menuStatus);
-  }
 
   function handleSearch() {
     setSearchStatus(!searchStatus);
@@ -72,6 +69,8 @@ function Main() {
               OUR STORY
             </a>
             
+               {/* Pass loading state to the DropDown */}
+          <DropDown title='PRODUCTS' dropDownData={categories} loading={loading} />
            
 
             <a className='main__navLinks' href='#contact'>
