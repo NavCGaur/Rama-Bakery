@@ -33,19 +33,31 @@ const Registration = () => {
     }
 
     try {
-      // Call the registration API
       await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/register', formData);
       setMessage('Registration successful. Redirecting to login...');
-      
-      // Redirect to login page after success
       setTimeout(() => {
         navigate('/login');
       }, 3000);
     } catch (error) {
-      setErrors({ submitError: 'Error during registration. Please try again.' });
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        if (error.response.status === 400) {
+          // Validation errors
+          setErrors(error.response.data.errors || { submitError: error.response.data.message });
+        } else {
+          setErrors({ submitError: error.response.data.message || 'An error occurred during registration.' });
+        }
+      } else if (error.request) {
+        // The request was made but no response was received
+        setErrors({ submitError: 'No response from server. Please try again.' });
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        setErrors({ submitError: 'Error during registration. Please try again.' });
+      }
+      console.error('Registration error:', error);
     }
-  };
-
+  }
   return (
     <div className="register__container">
       <div className="register__formwrapper">
