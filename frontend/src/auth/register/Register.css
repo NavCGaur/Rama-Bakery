@@ -64,6 +64,7 @@
     font-size: 2rem;
     border-radius: 0.25rem;
     transition: background-color 0.2s;
+    cursor: pointer;
 }
 
 .register__submit-button:hover {
