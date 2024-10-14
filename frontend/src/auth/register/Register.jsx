@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import validatePassword from '../utils/validatePassword'; // Import password validation function
+import validatePassword from '../utils/validatePassword';
 import './Register.css';
 
-const Registration = () => {
+const Register = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
@@ -20,44 +20,53 @@ const Registration = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+    // Clear the error for this field when the user starts typing
+    setErrors({
+      ...errors,
+      [e.target.name]: ''
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrors({});
 
-    // Validate passwords using the utility function
-    const validationErrors = validatePassword(formData.password, formData.confirmPassword);
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
+    // Client-side password validation
+    const passwordErrors = validatePassword(formData.password, formData.confirmPassword);
+    if (Object.keys(passwordErrors).length > 0) {
+      setErrors(passwordErrors);
       return;
     }
 
     try {
-      await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/register', formData);
+      const response = await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/register', {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password
+      });
+      
       setMessage('Registration successful. Redirecting to login...');
       setTimeout(() => {
         navigate('/login');
       }, 3000);
     } catch (error) {
       if (error.response) {
-        // The request was made and the server responded with a status code
-        // that falls out of the range of 2xx
         if (error.response.status === 400) {
-          // Validation errors
-          setErrors(error.response.data.errors || { submitError: error.response.data.message });
-        } else {
-          setErrors({ submitError: error.response.data.message || 'An error occurred during registration.' });
+          // Handle validation errors from the server
+          setErrors(error.response.data);
+        } else if (error.response.data.message) {
+          // Handle other server errors with messages
+          setErrors({ submitError: error.response.data.message });
         }
       } else if (error.request) {
-        // The request was made but no response was received
         setErrors({ submitError: 'No response from server. Please try again.' });
       } else {
-        // Something happened in setting up the request that triggered an Error
         setErrors({ submitError: 'Error during registration. Please try again.' });
       }
       console.error('Registration error:', error);
     }
-  }
+  };
+
   return (
     <div className="register__container">
       <div className="register__formwrapper">
@@ -126,11 +135,11 @@ const Registration = () => {
           </div>
         </form>
         <div className="register__login-redirect">
-          Already have an account? <Link to="/login" className="register__login-redirectLink" >Login here</Link>.
+          Already have an account? <Link to="/login" className="register__login-redirectLink">Login here</Link>.
         </div>
       </div>
     </div>
   );
 };
 
-export default Registration;
+export default Register;
