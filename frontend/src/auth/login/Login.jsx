@@ -36,7 +36,7 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('https://rama-bakery.vercel-k92f.app/api/auth/login', {
+      const response = await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/login', {
         email,
         password,
       });
@@ -47,15 +47,18 @@ const Login = () => {
         navigate('/admin');
 
       } 
-    } catch (error) {
+    }catch (error) {
+      console.error('Full error object:', error);
       if (error.response) {
+        console.error('Error response:', error.response);
         setError(error.response.data.message || 'Login failed');
       } else if (error.request) {
+        console.error('Error request:', error.request);
         setError('No response from server. Please try again.');
       } else {
+        console.error('Error message:', error.message);
         setError('An error occurred. Please try again.');
       }
-      console.error('Login error:', error);
     }
   };
 
