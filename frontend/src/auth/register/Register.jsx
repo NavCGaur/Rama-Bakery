@@ -48,11 +48,14 @@ const Register = () => {
     } catch (error) {
       if (error.response) {
         if (error.response.status === 400) {
-          // Handle validation errors from the server
-          setErrors(error.response.data);
-        } else if (error.response.data.message) {
-          // Handle other server errors with messages
-          setErrors({ submitError: error.response.data.message });
+          // Check for specific error messages returned from the server
+          if (error.response.data.message) {
+            // Set errors based on the message returned by the server
+            setErrors({ submitError: error.response.data.message });
+          } else {
+            // Set validation errors for specific fields (username/email)
+            setErrors(error.response.data);
+          }
         }
       } else if (error.request) {
         setErrors({ submitError: 'No response from server. Please try again.' });
