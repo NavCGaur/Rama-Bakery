@@ -9,6 +9,7 @@ import './App.css';
 import Main from '../src/container/main/Main';
 import About from '../src/container/about/About';
 import Products from '../src/container/products/Products';
+import Testimonials from './container/testimonials/Testimonials';
 import AdminMain from './container/adminDashboard/adminMain/AdminMain';
 import Login from './auth/login/Login'
 import Register from './auth/register/Register'
@@ -53,6 +54,7 @@ function MainLayout() {
       <About />
       <Products />
       <Login />
+      <Testimonials />
     </div>
   );
 }
