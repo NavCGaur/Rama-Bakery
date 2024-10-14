@@ -39,11 +39,7 @@ const Register = () => {
     }
 
     try {
-        await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/register', {
-        username: formData.username,
-        email: formData.email,
-        password: formData.password
-      });
+        await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/register',formData );
       
       setMessage('Registration successful. Redirecting to login...');
       setTimeout(() => {
