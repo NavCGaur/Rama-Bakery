@@ -1,6 +1,6 @@
-import testimonialImage1 from '../assets/testimonial-man-1.jpg';
-import testimonialImage2 from '../assets/testimonial-man-2.jpg';
-import testimonialImage3 from '../assets/testimonial-man-3.jpg';
+import testimonialImage1 from '../../assets/testimonial-man-1.jpg';
+import testimonialImage2 from '../../assets/testimonial-man-2.jpg';
+import testimonialImage3 from '../../assets/testimonial-man-3.jpg';
 
 
 

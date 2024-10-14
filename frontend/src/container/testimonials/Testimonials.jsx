@@ -1,10 +1,10 @@
 import {useState, React} from 'react'
 import './Testimonials.css'
 
-import {ReactComponent as ArrowLeft} from '../assets/arrow-left.svg'
-import {ReactComponent as ArrowRight} from '../assets/arrow-right.svg'
-import {ReactComponent as Circle} from '../assets/circle.svg'
-import {ReactComponent as CircleDot} from '../assets/circle-dot.svg'
+import {ReactComponent as ArrowLeft} from '../../assets/arrow-left.svg'
+import {ReactComponent as ArrowRight} from '../../assets/arrow-right.svg'
+import {ReactComponent as Circle} from '../../assets/circle.svg'
+import {ReactComponent as CircleDot} from '../../assets/circle-dot.svg'
 
 
 import testimonialsData from './data';
