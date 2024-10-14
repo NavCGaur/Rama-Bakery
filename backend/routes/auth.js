@@ -104,7 +104,6 @@ router.post('/register', async (req, res) => {
    
     console.log(username, email, password);
     const { error } = registrationSchema.validate({  username, email, password }, { abortEarly: true });
-    console.log('error:',error);
 
     if (error) {
       const errors = error.details.reduce((acc, curr) => {
