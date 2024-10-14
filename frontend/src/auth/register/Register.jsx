@@ -42,7 +42,6 @@ const Registration = () => {
         navigate('/login');
       }, 3000);
     } catch (error) {
-      console.error(error);
       setErrors({ submitError: 'Error during registration. Please try again.' });
     }
   };

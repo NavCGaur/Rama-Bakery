@@ -26,7 +26,7 @@ const ResetPassword = () => {
     }
 
     try {
-      const response = await axios.post(`https://rama-bakery.vercel.app/api/auth/reset-password/${token}`, { password });
+      const response = await axios.post(`https://rama-bakery-k92f.vercel.app/api/auth/reset-password/${token}`, { password });
       setMessage('Your password has been reset successfully.');
       console.log('API Response:', response.data);
       setCounter(10);
