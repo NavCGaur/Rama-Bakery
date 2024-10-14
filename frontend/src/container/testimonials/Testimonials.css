@@ -5,6 +5,12 @@
     min-height: 100vh;
     position: relative;
     justify-content: center;
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.7 ),  
+        rgba(0, 0, 0, 0.7) 100%  
+      ), url('../../assets/reviewbackgroundimage.jpg');
+
 }
 
 
