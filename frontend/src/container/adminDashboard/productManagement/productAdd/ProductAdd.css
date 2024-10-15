@@ -86,7 +86,7 @@
   }
   
   .error-message {
-    color: #d32f2f; /* Error red */
+    color: white;
     font-size: 2rem;
     font-weight: 600;
     margin: 2rem 0;

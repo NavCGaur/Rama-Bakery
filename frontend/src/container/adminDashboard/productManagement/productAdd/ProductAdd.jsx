@@ -123,7 +123,7 @@ function capitalizeInput(input) {
         image: imageUrl,
       }
 
-      const uploadResponse = await axios.post('http://localhost:5000/api/auth/addproduct',productData);
+      const uploadResponse = await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/addproduct',productData);
       setUploadResponse(uploadResponse.data);
 
       // Handle success (e.g., show success message, clear form)
@@ -142,7 +142,7 @@ function capitalizeInput(input) {
       setUploadProgress(0);
 
       //Updated product list after adding product
-      const updatedProducts = await axios.get('http://localhost:5000/api/products')
+      const updatedProducts = await axios.get('https://rama-bakery-k92f.vercel.app/api/products')
       setProducts(updatedProducts.data);
 
 
