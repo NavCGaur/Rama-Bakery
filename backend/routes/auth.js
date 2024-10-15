@@ -212,7 +212,7 @@ router.post('/forgot-password', async (req, res) => {
     });
 
     // Compose email
-    const resetUrl = `https://rama-bakery-k92f.vercel.app/reset-password/${token}`;
+    const resetUrl = `https://rama-bakery.vercel.app/reset-password/${token}`;
     const mailOptions = {
       to: user.email,
       from: process.env.EMAIL_USER,
