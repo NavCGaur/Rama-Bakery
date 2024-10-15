@@ -5,7 +5,7 @@ import axios from 'axios';
 function ProductDelete({ idsToDelete, onDeleteSuccess, onCancel }) {
   const handleConfirm = async () => {
     try {
-      await axios.delete('http://localhost:5000/api/auth/products', { data: { ids: idsToDelete } });
+      await axios.delete('https://rama-bakery-k92f.vercel.app/api/auth/products', { data: { ids: idsToDelete } });
       alert("Products deleted successfully");
       onDeleteSuccess(idsToDelete);
     } catch (error) {

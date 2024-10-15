@@ -38,14 +38,14 @@ const ProductAdd = ({handleProductAdd}) => {
   useEffect(() => {
   async function fetchData() {
     try {
-      const productResponse = await axios.get('http://localhost:5000/api/products');
+      const productResponse = await axios.get('https://rama-bakery-k92f.vercel.app/api/products');
 
       const newLastProductId = productResponse.data.length;
         setLastProductId(newLastProductId);
         setFormData(prevData => ({ ...prevData, id: newLastProductId + 1 }));
 
       // Fetch categories
-      const categoryResponse = await axios.get('http://localhost:5000/api/category');
+      const categoryResponse = await axios.get('https://rama-bakery-k92f.vercel.app/api/category');
       setCategories(categoryResponse.data);
       
 
