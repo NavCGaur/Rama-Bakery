@@ -14,7 +14,7 @@ const ForgotPassword = () => {
     setError('');
 
     try {
-      const response = await axios.post('https://rama-bakery.vercel.app/api/auth/forgot-password', { email });
+      const response = await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/forgot-password', { email });
 
       if (response.status === 200) {
         setMessage(response.data.message);
