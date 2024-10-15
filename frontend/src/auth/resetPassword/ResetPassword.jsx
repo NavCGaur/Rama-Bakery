@@ -67,7 +67,7 @@ const ResetPassword = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <div className="resetpasswordinput-group">
+            <div className="resetpassword__input-group">
               <label htmlFor="confirmPassword" className="resetpassword__inputgroup-label">Confirm New Password</label>
               <input
                 id="confirmPassword"
