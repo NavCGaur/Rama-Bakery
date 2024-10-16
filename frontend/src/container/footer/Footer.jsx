@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Footer.css'
 
-import {ReactComponent as Phone} from '../../assets/'
+import {ReactComponent as Phone} from '../../assets/phone-solid.svg'
 import {ReactComponent as Email} from '../../assets/email.svg'
 
 function Footer() {
