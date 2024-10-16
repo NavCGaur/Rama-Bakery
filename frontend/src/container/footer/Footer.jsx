@@ -11,13 +11,13 @@ function Footer() {
         <div className='footer__top'>
 
             <div className='footer__contact'>
-                <div className='contact__email'>
-                    <Email className='contact__email-icon'/>
+                <div className='footer__contact-email'>
+                    <Email className='footer__contact-icon'/>
                     <p contact__email-text>ramabakery@gmail.com</p>
                 </div>
 
-                <div className='contact__phone'>
-                    <Phone className='contact__phone-icon'/>
+                <div className='footer__contact-phone'>
+                    <Phone className='footer__contact-icon'/>
                     <p> +91 9920899845</p>
                 </div>
 
