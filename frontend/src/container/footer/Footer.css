@@ -1,3 +1,15 @@
+.footer__top{
+    background: linear-gradient(
+        to bottom, 
+        #ff4081 0%,  
+        #C90F4F 100%, 
+      
+    );
+    color: white;
+    font-size: 2rem;
+
+}
+
 .footer__contact-icon{
     height: 1.5rem;
     width: 1.5rem;
