@@ -1,12 +1,15 @@
 import React from 'react'
 
-import {ReactComponent as Phone} from '../../assets/phone-solid.svg'
+import './Footer.css'
+
+import {ReactComponent as Phone} from '../../assets/'
 import {ReactComponent as Email} from '../../assets/email.svg'
 
 function Footer() {
   return (
     <div className='Footer'>
         <div className='footer__top'>
+
             <div className='footer__contact'>
                 <div className='contact__email'>
                     <Email className='contact__email-icon'/>
@@ -16,10 +19,11 @@ function Footer() {
                 <div className='contact__phone'>
                     <Phone className='contact__phone-icon'/>
                     <p> +91 9920899845</p>
-        </div>
+                </div>
+
             </div>
             <div className='footer__workTime'>
-
+                
             </div>
             <div className='footer__location'>
 
