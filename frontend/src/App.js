@@ -17,6 +17,7 @@ import ForgotPassword from './auth/forgotPassword/ForgotPassword';
 import ResetPassword from './auth/resetPassword/ResetPassword';
 import ProtectedRoute from './auth/protected/ProtectedRoute';
 import ProductDetails from './container/products/productDetails/productDetails';
+import Footer from './container/footer/Footer';
 
 
 axios.defaults.withCredentials = true;
@@ -55,6 +56,7 @@ function MainLayout() {
       <Products />
       <Login />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
