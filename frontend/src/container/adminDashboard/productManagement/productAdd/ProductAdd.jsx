@@ -141,9 +141,7 @@ function capitalizeInput(input) {
       }
       setUploadProgress(0);
 
-      //Updated product list after adding product
-      const updatedProducts = await axios.get('https://rama-bakery-k92f.vercel.app/api/products')
-      setProducts(updatedProducts.data);
+    
 
 
     } catch (error) {

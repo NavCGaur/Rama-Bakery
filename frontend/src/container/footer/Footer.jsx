@@ -10,7 +10,8 @@ function Footer() {
     <div className='Footer'>
         <div className='footer__top'>
 
-            <div className='footer__contact'>
+            <div className='footer__contact-group'>
+                <p>Contact</p>
                 <div className='footer__contact'>
                     <Email className='footer__contact-icon'/>
                     <p contact__email-text>ramabakery@gmail.com</p>
@@ -23,11 +24,9 @@ function Footer() {
 
             </div>
             <div className='footer__workTime'>
-                
+                <p>Work Time</p>
             </div>
-            <div className='footer__location'>
-
-            </div>
+        
             <div className='footer__map'>
 
             </div>
