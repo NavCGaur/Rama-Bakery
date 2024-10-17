@@ -18,7 +18,6 @@ const ProductAdd = ({handleProductAdd}) => {
   const [error, setError] = useState('');
   const [lastProductId, setLastProductId] = useState(0);
   const [categories, setCategories] = useState([]);
-  const {setProducts} = useProducts(); // Get products from context
 
 
   const [uploadProgress, setUploadProgress] = useState(0);
