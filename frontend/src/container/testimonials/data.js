@@ -1,5 +1,5 @@
 import testimonialImage1 from '../../assets/testimonialimage1.jpg';
-import testimonialImage2 from '../../assets/testimonialimage2.jpg';
+import testimonialImage2 from '../../assets/testimonialimage2.png';
 import testimonialImage3 from '../../assets/testimonialimage3.jpg';
 
 
