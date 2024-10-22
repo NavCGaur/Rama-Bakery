@@ -9,7 +9,7 @@ import { ReactComponent as Search } from '../../assets/search.svg';
 
 import './Main.css';
 import DropDown from '../../components/dropdown/DropDown';
-import {ReactComponent as Whatsapp} from '../../assets/whatsapppng.png'
+import Whatsapp from '../../assets/whatsapppng.png'
 
 
 function Main() {
@@ -133,9 +133,12 @@ function Main() {
         </div>
       </div>
       
-      <div className='footer__social-icons'>
-          <Link to='https://wa.me/919920899845' target='_blank'><Whatsapp className="footer__social-icons"/></Link>        
-      </div>
+      <a href="https://wa.me/919920899845" // Replace with your WhatsApp number
+         target="_blank" 
+         rel="noopener noreferrer"
+         className="footer__social-icons">
+            <img src={Whatsapp} alt="WhatsApp" />
+      </a>
       
     </div>
   );

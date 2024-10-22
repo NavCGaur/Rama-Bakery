@@ -182,13 +182,14 @@
 }
 
 
-.footer__social-icons{
+.main__social-icons img{
     position: fixed;
-    bottom: 4%;
+    bottom: 5%;
     right: 4%;
     z-index: 50;
+    height: 6rem;
+    width: 6rem;
 }
-  
 
 @media (min-width:1600px){
     .main::after{
