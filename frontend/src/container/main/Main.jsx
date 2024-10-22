@@ -7,6 +7,8 @@ import { ReactComponent as Search } from '../../assets/search.svg';
 
 import './Main.css';
 import DropDown from '../../components/dropdown/DropDown';
+import {ReactComponent as Whatsapp} from '../../assets/whatsapp.svg'
+
 
 function Main() {
   const [ setMenuStatus] = useState(false);
@@ -128,6 +130,11 @@ function Main() {
           </a>
         </div>
       </div>
+      
+      <div className='footer__social-icons'>
+          <Link to='https://wa.me/919920899845' target='_blank'><Whatsapp className="footer__social-icons"/></Link>        
+      </div>
+      
     </div>
   );
 }
