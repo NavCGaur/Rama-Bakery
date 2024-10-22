@@ -12,7 +12,7 @@ const ProductAdd = ({ handleProductAdd }) => {
 
   // State variables
   const [image, setImage] = useState(null); // For storing the selected image
-  const [uploadResponse, setUploadResponse] = useState(''); // To handle the response after adding a product
+  const [ setUploadResponse] = useState(''); // To handle the response after adding a product
   const [error, setError] = useState(''); // To store error messages
   const [lastProductId, setLastProductId] = useState(0); // To store the last product's ID fetched from the backend
   const [categories, setCategories] = useState([]); // To store available categories fetched from the backend
@@ -172,11 +172,6 @@ const ProductAdd = ({ handleProductAdd }) => {
       setUploadProgress(0); // Reset upload progress
     }
   };
-
-  // Function to reset the upload response (e.g., for adding more products)
-  function handleUploadResponse() {
-    setUploadResponse(false);
-  }
 
   return (
     <div className="productAdd">
