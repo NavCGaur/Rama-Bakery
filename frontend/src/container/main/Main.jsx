@@ -9,7 +9,7 @@ import { ReactComponent as Search } from '../../assets/search.svg';
 
 import './Main.css';
 import DropDown from '../../components/dropdown/DropDown';
-import {ReactComponent as Whatsapp} from '../../assets/whatsapp.svg'
+import {ReactComponent as Whatsapp} from '../../assets/whatsapppng.png'
 
 
 function Main() {
