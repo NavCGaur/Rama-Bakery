@@ -4,8 +4,6 @@ import testimonialImage3 from '../../assets/testimonialimage3.jpg';
 
 
 
-
-
 const testimonialsData = [  {
                             image: testimonialImage3,
                             review: "You guys made my sons birthday a great one. He loved his lion King cake. Also, your extra service of holding the cake an extra day after not having a fridge large enough. We will be back on many more occasions. Thanks for everything.",                       
