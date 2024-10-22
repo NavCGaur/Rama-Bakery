@@ -8,7 +8,7 @@ const AuthContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
-  const [category, setCategory] = useState();
+  const [category, setCategory] = useState("All Products");
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

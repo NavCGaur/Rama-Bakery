@@ -54,7 +54,6 @@ function MainLayout() {
       <Main />
       <About />
       <Products />
-      <Login />
       <Testimonials />
       <Footer />
     </div>

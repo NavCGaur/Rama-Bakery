@@ -1,6 +1,8 @@
 import { React, useState, useEffect, useRef } from 'react'; // Import necessary React hooks
 import { Link } from 'react-router-dom'; // Link component for navigation
 import axios from 'axios'; // Axios for making HTTP requests
+import { useAuthentication } from '../../../../data-context/DataContext'; // useAuthentication for Firebase Authentication
+
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'; // Firebase storage imports
 import { storage } from '../../../../firebase'; // Firebase storage reference
 import './ProductAdd.css'; // Importing styles
@@ -15,6 +17,8 @@ const ProductAdd = ({ handleProductAdd }) => {
   const [lastProductId, setLastProductId] = useState(0); // To store the last product's ID fetched from the backend
   const [categories, setCategories] = useState([]); // To store available categories fetched from the backend
 
+ 
+  const { isAuthenticated } = useAuthentication(); //Authentication status from useAuthentication
   const [uploadProgress, setUploadProgress] = useState(0); // For tracking upload progress
   const fileInputRef = useRef(null); // Reference for the file input field
 
@@ -71,9 +75,22 @@ const ProductAdd = ({ handleProductAdd }) => {
 
   // Function to upload image to Firebase
   const uploadImage = (file) => {
+
+
+
+    if (!isAuthenticated) {
+      return Promise.reject(new Error('User not authenticated'));
+    }
+
+    const metadata = {
+      customMetadata: {
+        isAuthenticated: 'true'
+      }
+    };
+
     return new Promise((resolve, reject) => {
       const storageRef = ref(storage, `images/${file.name}`); // Reference to Firebase storage with file name
-      const uploadTask = uploadBytesResumable(storageRef, file); // Start the upload task
+      const uploadTask = uploadBytesResumable(storageRef, file, metadata); // Start the upload task
 
       // Track the upload progress
       uploadTask.on(
@@ -103,6 +120,13 @@ const ProductAdd = ({ handleProductAdd }) => {
     e.preventDefault(); // Prevent default form submission behavior
     setError(''); // Clear previous error messages
     setUploadProgress(0); // Reset upload progress
+
+    
+    if (!isAuthenticated) {
+      setError('You must be logged in to add a product');
+      return;
+    }
+
 
     if (!image) {
       setError('Please select an image'); // Ensure an image is selected before submission
