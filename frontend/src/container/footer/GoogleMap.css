@@ -1,0 +1,5 @@
+.footer__google-map iframe{
+    height: 20rem;
+    width: 40vw;
+    border-radius: 15px;
+}
