@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import { useProducts, useCategories, useCategory } from '../../data-context/DataContext';
 import { useNavigate } from 'react-router-dom';
@@ -133,10 +132,10 @@ function Main() {
         </div>
       </div>
       
-      <a href="https://wa.me/919920899845" // Replace with your WhatsApp number
+      <a href="https://wa.me/919920899845" 
          target="_blank" 
          rel="noopener noreferrer"
-         className="footer__social-icons">
+         className="main__social-icons">
             <img src={Whatsapp} alt="WhatsApp" />
       </a>
       
