@@ -1,6 +1,6 @@
-import testimonialImage1 from '../../assets/testimonial-man-1.jpg';
-import testimonialImage2 from '../../assets/testimonial-man-2.jpg';
-import testimonialImage3 from '../../assets/testimonial-man-3.jpg';
+import testimonialImage1 from '../../assets/testimonialimage1.jpg';
+import testimonialImage2 from '../../assets/testimonialimage2.jpg';
+import testimonialImage3 from '../../assets/testimonialimage3.jpg';
 
 
 
@@ -8,29 +8,29 @@ import testimonialImage3 from '../../assets/testimonial-man-3.jpg';
 
 const testimonialsData = [  {
                             image: testimonialImage3,
-                            review: "They are saviours when it comes to tax consultancy! Very knowledgable team, very helpful. Always give undivided attention and respond to requests in timely manner.  Praveen Singh., Realtor.",                       
+                            review: "You guys made my sons birthday a great one. He loved his lion King cake. Also, your extra service of holding the cake an extra day after not having a fridge large enough. We will be back on many more occasions. Thanks for everything.",                       
                             },
                             {
                             image: testimonialImage2,
-                            review: "Excellent, practical, top tier advice that is well appreciated.They understand the most complex matters and provide elegent solutions. They are key advisory in our growth.  Vishvas Patil., Entrepreneur.",                       
+                            review: "Your Cake was fabulous! Every piece was savored. Wish we ordered more... Thanks for delivering all the way up to Ranch . We appreciate your service.",                       
                             },
         
                             {
                             image: testimonialImage1,
-                            review: "What sets this firm apart is their commitment to quality. Every detail was meticulously handled, and they were      always available to answer my questions. It's not just a service; it's a partnership. Mohan Rao., Corporate Executive.",                       
+                            review: "Can't thank you enough for doing such wonderful work on our wedding cake. Everything was beautiful and tasted wonderful. Thank you for all the time, care and effort.",                       
                             } ,
                             {
                                 image: testimonialImage3,
-                                review: "They are saviours when it comes to tax consultancy! Very knowledgable team, very helpful. Always give undivided attention and respond to requests in timely manner.  Praveen Singh., Realtor.",                       
+                                review: "You guys made my sons birthday a great one. He loved his lion King cake. Also, your extra service of holding the cake an extra day after not having a fridge large enough. We will be back on many more occasions. Thanks for everything.",                       
                                 },
                                 {
                                 image: testimonialImage2,
-                                review: "Excellent, practical, top tier advice that is well appreciated.They understand the most complex matters and provide elegent solutions. They are key advisory in our growth.  Vishvas Patil., Entrepreneur.",                       
+                                review: "Your Cake was fabulous! Every piece was savored. Wish we ordered more... Thanks for delivering all the way up to Ranch . We appreciate your service.",                       
                                 },
             
                                 {
                                 image: testimonialImage1,
-                                review: "What sets this firm apart is their commitment to quality. Every detail was meticulously handled, and they were      always available to answer my questions. It's not just a service; it's a partnership. Mohan Rao., Corporate Executive.",                       
+                                review: "Can't thank you enough for doing such wonderful work on our wedding cake. Everything was beautiful and tasted wonderful. Thank you for all the time, care and effort.",                       
                                 }  
                         
 
