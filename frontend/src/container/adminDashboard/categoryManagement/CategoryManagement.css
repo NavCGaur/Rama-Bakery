@@ -1,0 +1,232 @@
+.categoryManagement{
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    background: #fff8e1;
+    min-height: 100vh;
+
+}
+
+.categoryManagement__addDelete{
+    display: flex;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    position: relative;
+   
+}
+
+.categoryManagement__icon{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    fill: white;
+
+}
+
+.categoryManagement__add{
+    margin-right: 3rem;
+    width: 24rem;
+    height: 4rem;
+    font-weight: 700;
+    background-color: #f44940;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.categoryManagement__delete, .categoryManagement__edit{
+    margin-right: 3rem;
+    width: 30rem;
+    height: 4rem;
+    font-weight: 700;
+    background-color: #f44940;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+
+.categoryManagement__filter{
+    display: flex;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    margin-left: 3.5rem;
+}
+
+.categoryManagement__itemsPerPageLabel{
+    margin-left: 3rem;
+    font-size: 2.2rem;
+
+}
+
+.categoryManagement__filter-label, .categoryManagement__itemsPerPageLabel{
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+.categoryManagement__itemsPerPageInput{
+    text-align: center;
+    width: 6rem;
+    font-size: 1.8rem;
+}
+
+
+
+.categoryManagement__addModal{
+position: absolute;
+width: 80%;
+top: -2rem;
+left: 15%;
+z-index: 30;
+}
+
+.categoryManagement__addmodal-closeicon{
+ height: 4rem;
+ width: 4rem;
+ position: absolute;
+ fill: white;
+ top: 3rem;
+ left: 75%;
+ z-index: 50;
+ cursor: pointer;
+}
+
+.categoryManagement h2{
+    padding: 3rem;
+}
+
+
+.categoryManagement__table{
+    width: 90%;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+    overflow-y: auto;
+    
+
+
+}
+
+.categoryManagement__table-sorticon{
+    height: 2rem;
+    width: 2rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    fill: #1a0202;
+    cursor: pointer;
+}
+
+.categoryManagement__table-headrow{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr; /* Make the first column narrower */
+    padding: 1rem 0;
+    background-color: #f44940;
+    color: white;
+    font-weight: 600;
+
+}
+
+.categoryManagement__table-data{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr; /* Make the first column narrower */
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 600;
+}
+
+
+.categoryManagement__table-data input{
+    cursor: pointer;
+}
+
+.categoryManagement__table-data:nth-child(odd) {
+    background-color: #fff8e1; 
+}
+
+.categoryManagement__table-data:nth-child(even) {
+    background-color: #f9aca8; /* White color for even rows */
+}
+
+.categoryManagement__table-data:hover {
+    background-color: #f44940; /* A slight hover effect for better UX */
+}
+
+
+.categoryManagement__table-data :last-child{
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoryManagement__table-headrow--editing,
+.categoryManagement__table-data--editing {
+    grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr; /* 9 columns with Actions */
+}
+
+
+.categoryManagement__deleteButton{
+    margin-left: 3rem;
+    height: 3rem;
+    width: 16rem;
+    border-radius: 5px;
+}
+
+.delete-confirmation-modal {
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    width: 55%;
+    height: 35%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+  }
+  
+  .delete-confirmation-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .delete-confirmation-content p{
+    all: unset;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: #f44940;
+
+  }
+  
+  .delete-confirmation-buttons {
+    margin-top: 20px;
+  }
+  
+  .delete-confirmation-buttons button {
+    margin: 0 10px;
+    padding: 5px 10px;
+  }
+
+  .categoryManagement__loadMore{
+    margin-left: 40%;
+    margin-bottom: 2rem;
+  }
+
+  .categoryManagement__loadMore button{
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.8rem;
+    background-color: #f44940;
+    cursor: pointer;
+    margin-bottom: 4rem;
+
+  }

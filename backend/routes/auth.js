@@ -92,6 +92,13 @@ const productAddSchema = Joi.object({
     
 });
 
+const productCategoryValidationSchema = Joi.object({
+  categoryName: Joi.string().required().messages({
+      'string.base': 'Category name must be a string.',
+      'any.required': 'Category name is required.'
+  })
+});
+
 function capitalizeWords(str) {
   return str.replace(/\b\w/g, char => char.toUpperCase());
 }
@@ -433,6 +440,121 @@ router.put('/products/:id', async (req, res) => {
   } catch (err) {
     console.error('Error while updating product:', err);
     res.status(500).json({ message: 'Server error while updating product' });
+  }
+});
+
+
+
+// Category Add Route
+router.post('/category', async (req, res) => {
+  const { categoryName } = req.body;
+
+  try {
+    console.log(categoryName)
+    const { error } = productCategoryValidationSchema.validate({ categoryName  }, { abortEarly: true });
+
+    if (error) {
+      const errors = error.details.reduce((acc, curr) => {
+      
+        acc[curr.path[0]] = curr.message;
+        return acc;
+      }, {});
+
+      return res.status(400).json(errors);
+    }
+
+    const categoriesDoc = await ProductCategory.findOne();
+    console.log("categoryName",categoryName)
+
+    console.log("categoriesDoc",categoriesDoc)
+    if (!categoriesDoc) {
+      return res.status(404).json({ message: 'Category document not found' });
+    }
+
+    categoriesDoc.productCategories.push(categoryName);
+    await categoriesDoc.save();
+
+    res.json({ message: 'Category added successfully', categoryName });
+  } catch (err) {
+    console.error('Error adding category:', err);
+    res.status(500).json({ message: 'Server error while adding category' });
+  }
+});
+
+
+
+
+// Category Update Route
+router.put('/categories', async (req, res) => {
+  const { categories } = req.body;
+
+  try {
+  
+    const result = await ProductCategory.findOneAndUpdate(
+      {}, 
+      { categories },
+      { new: true }
+    );
+
+    if (!result) {
+      return res.status(404).json({ message: 'Categories not found' });
+    }
+
+    res.json({
+      message: 'Categories updated successfully',
+      updatedCategories: result.categories
+    });
+  } catch (err) {
+    console.error('Error while updating categories:', err);
+    res.status(500).json({ message: 'Server error while updating categories' });
+  }
+});
+
+
+// Category Delete Route
+router.delete('/categories', async (req, res) => {
+  const { ids } = req.body;
+
+  try {
+    // Get current categories array directly from your schema
+    // Assuming your ProductCategory model has a field 'productCategories'
+    const categoriesDoc = await ProductCategory.findOne();
+
+    console.log('categoriesDoc:', categoriesDoc);
+    console.log('Current categories:', categoriesDoc.productCategories);
+
+    if (!categoriesDoc || !Array.isArray(categoriesDoc.productCategories)) {
+      return res.status(404).json({ message: 'Categories not found or invalid format' });
+    }
+
+    console.log('IDs to delete:', ids);
+
+    // Convert string indices to numbers and filter out the categories to keep
+    const updatedCategories = categoriesDoc.productCategories.filter((_, index) => 
+      !ids.includes(index.toString())
+    );
+
+    console.log('Updated categories:', updatedCategories);
+
+    // Update the document with the new categories array
+    const result = await ProductCategory.findOneAndUpdate(
+      { _id: categoriesDoc._id },  // Use the document's ID for updating
+      { $set: { productCategories: updatedCategories } },  // Update the correct field 'productCategories'
+      { new: true }  // Return the updated document
+    );
+
+    if (!result) {
+      return res.status(404).json({ message: 'Failed to update categories' });
+    }
+
+    res.json({
+      message: 'Categories deleted successfully',
+      updatedCategories: result.productCategories  // Return the updated field
+    });
+
+  } catch (err) {
+    console.error('Error while deleting categories:', err);
+    res.status(500).json({ message: 'Server error while deleting categories' });
   }
 });
 

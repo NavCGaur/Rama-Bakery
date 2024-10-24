@@ -1,0 +1,68 @@
+.categoryManagement__table-data{
+    width: 100%;
+}
+
+.categoryManagement__table-headrow--editing,
+.categoryManagement__table-data--editing {
+    grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr; 
+}
+.categoryManagement__table-data .categoryUpdate__checkbox  {
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+.categoryManagement__table-data td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoryManagement__table-data .categoryUpdate__image{
+    width: 100px;
+    height: 50px; 
+    object-fit: cover;
+    margin-left: 10rem;
+
+}
+
+.categoryManagement__table-data .categoryUpdate__table-data--editfield {
+    height: 50%;
+    width: 60%;
+    text-align: center;  
+    position: relative;
+ }
+
+ .categoryManagement__table-data .categoryUpdate__table-data--editfield  .category{   
+    text-align: left;   
+ }
+
+ .categoryUpdate__table-data--buttons{
+    position: absolute;
+    right: 3.5%;
+    display: flex;
+    flex-direction: column;
+
+
+ }
+
+ .categoryUpdate__table-data--buttons button{
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    background-color: #c9251c;
+    color: white;
+
+ }
+
+ .categoryUpdate__table-data--editfield {
+    height: 4rem !important; 
+    width: 15rem !important; 
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+  }
+ 
