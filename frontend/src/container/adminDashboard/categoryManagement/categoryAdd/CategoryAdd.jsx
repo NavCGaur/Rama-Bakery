@@ -14,7 +14,7 @@ const CategoryAdd = ({ handleCategoryAdd }) => {
   useEffect(() => {
     async function fetchCategories() {
       try {
-        const response = await axios.get('https://rama-bakery-k92f.vercel.app/api/auth/category');
+        const response = await axios.get('https://rama-bakery-k92f.vercel.app/api/category');
         setCategories(response.data);
       } catch (error) {
         console.error('Error fetching categories:', error);
@@ -39,7 +39,7 @@ const CategoryAdd = ({ handleCategoryAdd }) => {
 
     try {
       // Add category
-       await axios.post('http://localhost:5000/api/auth/category', {
+       await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/category', {
         categoryName: formData.categoryName,
       });
 
