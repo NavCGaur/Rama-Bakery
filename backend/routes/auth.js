@@ -520,21 +520,17 @@ router.delete('/categories', async (req, res) => {
     // Assuming your ProductCategory model has a field 'productCategories'
     const categoriesDoc = await ProductCategory.findOne();
 
-    console.log('categoriesDoc:', categoriesDoc);
-    console.log('Current categories:', categoriesDoc.productCategories);
 
     if (!categoriesDoc || !Array.isArray(categoriesDoc.productCategories)) {
       return res.status(404).json({ message: 'Categories not found or invalid format' });
     }
 
-    console.log('IDs to delete:', ids);
 
     // Convert string indices to numbers and filter out the categories to keep
     const updatedCategories = categoriesDoc.productCategories.filter((_, index) => 
       !ids.includes(index.toString())
     );
 
-    console.log('Updated categories:', updatedCategories);
 
     // Update the document with the new categories array
     const result = await ProductCategory.findOneAndUpdate(
