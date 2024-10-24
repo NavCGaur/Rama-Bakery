@@ -4,7 +4,7 @@ import axios from 'axios';
 function CategoryDelete({ idsToDelete, onDeleteSuccess, onCancel }) {
   const handleConfirm = async () => {
     try {
-      await axios.delete('https://rama-bakery-k92f.vercel/api/auth/categories', { 
+      await axios.delete('https://rama-bakery-k92f.vercel.app/api/auth/categories', { 
         data: { ids: idsToDelete } 
       });
       alert("Categories deleted successfully");
