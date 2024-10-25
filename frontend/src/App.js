@@ -18,7 +18,6 @@ import ResetPassword from './auth/resetPassword/ResetPassword';
 import ProtectedRoute from './auth/protected/ProtectedRoute';
 import ProductDetails from './container/products/productDetails/productDetails';
 import Footer from './container/footer/Footer';
-import CategoryManagement from './container/adminDashboard/categoryManagement/CategoryManagement';
 
 
 axios.defaults.withCredentials = true;
