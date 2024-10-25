@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const Products = require('../models/Products');
+const ProductCategory = require('../models/ProductCategory')
 const router = express.Router();
 const Joi = require('joi');
 const  {getNextProductId}  = require('../utils/IdGenerator');
