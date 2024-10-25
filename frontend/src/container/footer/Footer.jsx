@@ -5,7 +5,7 @@ import './Footer.css'
 import { Link } from 'react-router-dom';
 
 
-import GoogleMap from './GoogleMap'
+import Map from './Map'
 
 import {ReactComponent as Phone} from '../../assets/phone-solid.svg'
 import {ReactComponent as Email} from '../../assets/email.svg'
@@ -68,7 +68,7 @@ function Footer() {
 
         
             <div className='footer__map'>
-                <GoogleMap />
+                <Map />
             </div>
         
         </div>
