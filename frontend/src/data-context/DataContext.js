@@ -74,15 +74,33 @@ export const DataProvider = ({ children }) => {
     }
   };
 
+  const updateCategories = async (updatedCategories) => {
+    try {
+      setLoading(true);
+      // Send the entire updated categories array to the backend
+      await axios.put('https://rama-bakery-k92f.vercel.app/api/auth/categories', {
+        categories: updatedCategories
+      });
+      
+      // Update the local state with the new categories
+      setCategories(updatedCategories);
+      setLoading(false);
+    } catch (err) {
+      setError('Error updating categories: ' + (err.message || 'An unknown error occurred'));
+      setLoading(false);
+      throw err;
+    }
+  };
+
 
   return (
     <ProductContext.Provider value={{ products, setProducts, loading, error, updateProducts }}>
       <CategoryContext.Provider value={{ category, setCategory }}>
-        <CategoriesContext.Provider value={{ categories, setCategories, loading, error }}>
-          <AuthContext.Provider value={{isAuthenticated, setIsAuthenticated}}>
+      <CategoriesContext.Provider value={{ categories, setCategories, loading, error, updateCategories }}>
+      <AuthContext.Provider value={{isAuthenticated, setIsAuthenticated}}>
           {children}
-          </AuthContext.Provider>
-        </CategoriesContext.Provider>
+      </AuthContext.Provider>
+      </CategoriesContext.Provider>
       </CategoryContext.Provider>
     </ProductContext.Provider>
   );
