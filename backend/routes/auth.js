@@ -445,43 +445,72 @@ router.put('/products/:id', async (req, res) => {
 
 
 
-// Category Add Route
 router.post('/category', async (req, res) => {
   const { categoryName } = req.body;
 
   try {
-    console.log(categoryName)
     const { error } = productCategoryValidationSchema.validate({ categoryName  }, { abortEarly: true });
-
+    
     if (error) {
       const errors = error.details.reduce((acc, curr) => {
-      
         acc[curr.path[0]] = curr.message;
         return acc;
       }, {});
-
+      
       return res.status(400).json(errors);
     }
-
+    
     const categoriesDoc = await ProductCategory.findOne();
-    console.log("categoryName",categoryName)
+    console.log("categoryName", categoryName)
+    console.log("categoriesDoc", categoriesDoc)
 
-    console.log("categoriesDoc",categoriesDoc)
     if (!categoriesDoc) {
       return res.status(404).json({ message: 'Category document not found' });
     }
-
+    
     categoriesDoc.productCategories.push(categoryName);
     await categoriesDoc.save();
-
+    
     res.json({ message: 'Category added successfully', categoryName });
   } catch (err) {
-    console.error('Error adding category:', err);
-    res.status(500).json({ message: 'Server error while adding category' });
+    // Enhanced error logging
+    console.error('Error details:', {
+      message: err.message,
+      name: err.name,
+      code: err.code,
+      stack: err.stack
+    });
+
+    // Identify specific error types
+    if (err.name === 'ValidationError') {
+      return res.status(400).json({
+        message: 'Validation error',
+        details: err.message
+      });
+    }
+
+    if (err.name === 'MongoServerError') {
+      return res.status(500).json({
+        message: 'Database error',
+        details: err.message
+      });
+    }
+
+    if (err.name === 'MongooseError') {
+      return res.status(500).json({
+        message: 'Mongoose operation error',
+        details: err.message
+      });
+    }
+
+    // Default error response for unhandled errors
+    res.status(500).json({
+      message: 'Server error while adding category',
+      error: err.message,
+      errorType: err.name
+    });
   }
 });
-
-
 
 
 // Category Update Route
