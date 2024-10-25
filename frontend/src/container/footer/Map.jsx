@@ -8,7 +8,7 @@ const Map = () => {
 
   return (
     <div className='footer__map'>
-      <div className=".footer__map-link" onClick={handleMapClick} style={{ cursor: 'pointer' }}>
+      <div className="footer__map-link" onClick={handleMapClick} style={{ cursor: 'pointer' }}>
         <iframe 
           src="https://www.openstreetmap.org/export/embed.html?bbox=72.82510433518108%2C19.231813819282113%2C72.82510433518108%2C19.231813819282113&layer=mapnik"
           style={{ border: 0 }} // Adjust the height as needed
