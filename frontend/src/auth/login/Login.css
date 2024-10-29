@@ -32,7 +32,13 @@
   gap: 1.5rem;
 }
 
-.form-input {
+.login__formlabel{
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+
+}
+
+.login__forminput {
   width: 100%;
   padding: 1rem;
   border: 1px solid #9A332E; /* Red border */
@@ -58,7 +64,6 @@
 
 .forgot-password-link {
   font-size: 1.8rem;
-  color: #333;
 }
 
 .register-link {
@@ -84,3 +89,7 @@
   text-align: center; /* Optional: Center-align the text */
 }
 
+.login__error-message{
+  font-size: 1.8rem;
+
+}

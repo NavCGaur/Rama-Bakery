@@ -33,13 +33,13 @@ const Login = () => {
   axios.defaults.withCredentials = true;
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault();                 
     setError('');
     try {
       const response = await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/login', {
         email,
         password,
-      });
+      });       
 
       if (response.status === 200) {
 
@@ -69,32 +69,32 @@ const Login = () => {
         {message && <div className="success-message">{message}</div>}
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="input-group">
-            <label htmlFor="email-address" className="sr-only">Email address</label>
+            <label htmlFor="email-address" className="login__formlabel">Email address</label>
             <input
               id="email-address"
               name="email"
               type="email"
               required
-              className="form-input"
+              className="login__forminput"
               placeholder="Email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="input-group">
-            <label htmlFor="password" className="sr-only">Password</label>
+            <label htmlFor="password" className="login__formlabel">Password</label>
             <input
               id="password"
               name="password"
               type="password"
               required
-              className="form-input"
+              className="login__forminput"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          {error && <div className="error-message">{error}</div>}
+          {error && <div className="login__error-message">{error}</div>}
           <div className="button-group">
             <button type="submit" className="submit-button">Sign in</button>
           </div>
