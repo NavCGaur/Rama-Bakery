@@ -120,7 +120,7 @@ z-index: 30;
 
 .categoryManagement__table-headrow{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ; 
+    grid-template-columns: 1fr 1fr 2fr ; 
     padding: 1rem 0;
     background-color: #f44940;
     color: white;
@@ -130,7 +130,7 @@ z-index: 30;
 
 .categoryManagement__table-data{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 2fr ; 
+    grid-template-columns: 1fr 1fr 2fr ; 
     text-align: center;
     padding: 1rem 0;
     font-weight: 600;
