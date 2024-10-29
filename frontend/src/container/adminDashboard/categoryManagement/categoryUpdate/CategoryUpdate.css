@@ -4,11 +4,11 @@
 
 .categoryManagement__table-headrow--editing,
 .categoryManagement__table-data--editing {
-    grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns:  1fr 1fr 1fr 2fr ; 
 }
 .categoryManagement__table-data .categoryUpdate__checkbox  {
-    height: 2.2rem;
-    width: 2.2rem;
+    height: 2.4rem;
+    width: 2.4rem;
 }
 
 .categoryManagement__table-data td{

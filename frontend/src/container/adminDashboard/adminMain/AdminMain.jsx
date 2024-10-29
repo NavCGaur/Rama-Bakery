@@ -8,8 +8,9 @@ import { useAuthentication } from '../../../data-context/DataContext';
 import {ReactComponent as HomeIcon} from '../../../assets/homeicon.svg'
 import {ReactComponent as DashboardIcon} from '../../../assets/dashboardicon.svg'
 import {ReactComponent as ProductIcon} from '../../../assets/producticon.svg'
-import {ReactComponent as UserIcon} from '../../../assets/usericon.svg'
 import {ReactComponent as LogoutIcon} from '../../../assets/leftlogouticon.svg'
+import { ReactComponent as CategoryIcon } from '../../../assets/categoryicon.svg';
+
 
 import Dashboard from '../dashboard/Dashboard';
 import ProductManagement from '../productManagement/ProductManagement';
@@ -82,7 +83,7 @@ function AdminMain() {
                     Product Management
                 </div>
                 <div className={handleOption===3?'adminmain__left-Icon active':'adminmain__left-Icon'} onClick={() => changeHandleOption(3)}>
-                    <UserIcon className='adminmain__icon' />
+                    <CategoryIcon className='adminmain__icon' />
                     Category Management
                 </div>
                 <div className='adminmain__left-Icon' onClick={() => changeHandleOption(4)}>
