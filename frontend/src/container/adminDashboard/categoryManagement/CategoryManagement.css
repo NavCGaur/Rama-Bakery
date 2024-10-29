@@ -164,7 +164,7 @@ z-index: 30;
 
 .categoryManagement__table-headrow--editing,
 .categoryManagement__table-data--editing {
-    grid-template-columns: 0.5fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr; /* 9 columns with Actions */
+    grid-template-columns:  1fr 1fr 2fr ; 
 }
 
 
