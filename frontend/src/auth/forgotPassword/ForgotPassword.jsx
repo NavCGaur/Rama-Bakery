@@ -38,6 +38,8 @@ const ForgotPassword = () => {
 
       <h2>Forgot Password</h2>
       <form onSubmit={handleSubmit} className="forgotpassword__form">
+      {
+        !message &&
         <div className="forgotpassword__inputgroup">
           <label htmlFor="email" className="forgotpassword__inputgroup-label">Enter your email</label>
           <input
@@ -49,13 +51,14 @@ const ForgotPassword = () => {
             className="forgotpassword__form-input"
           />
         </div>
+        }
         {
         message && <div className="forgotpassword__successmessage">{message}&nbsp;
           <Link to="/login" className='forgotpassword__successmessage-link'>Login Again</Link>
           </div>
         }
         {error && <div className="forgotpassword__errormessage">{error}</div>}
-        <button type="submit" className="forgotpassword__submit-button">Send Reset Link</button>
+        {!message && <button type="submit" className="forgotpassword__submit-button">Send Reset Link</button>}
       </form>
 
     </div>
