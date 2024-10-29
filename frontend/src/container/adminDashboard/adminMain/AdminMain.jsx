@@ -13,6 +13,8 @@ import {ReactComponent as LogoutIcon} from '../../../assets/leftlogouticon.svg'
 
 import Dashboard from '../dashboard/Dashboard';
 import ProductManagement from '../productManagement/ProductManagement';
+import CategoryManagement from '../categoryManagement/CategoryManagement';
+
 
 
 
@@ -48,7 +50,7 @@ function AdminMain() {
       case 2:
         return <ProductManagement />;
       case 3:
-        return <Dashboard />;
+        return <CategoryManagement />;
       case 4:
         return navigate('/login');
         ;
@@ -81,7 +83,7 @@ function AdminMain() {
                 </div>
                 <div className={handleOption===3?'adminmain__left-Icon active':'adminmain__left-Icon'} onClick={() => changeHandleOption(3)}>
                     <UserIcon className='adminmain__icon' />
-                    User Management
+                    Category Management
                 </div>
                 <div className='adminmain__left-Icon' onClick={() => changeHandleOption(4)}>
                     <LogoutIcon className='adminmain__icon'/>

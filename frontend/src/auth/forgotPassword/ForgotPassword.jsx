@@ -53,7 +53,7 @@ const ForgotPassword = () => {
         </div>
         }
         {
-        message && <div className="forgotpassword__successmessage">{message}&nbsp;
+        message && <div className="forgotpassword__successmessage">{message}<br/><br/>
           <Link to="/login" className='forgotpassword__successmessage-link'>Login Again</Link>
           </div>
         }
