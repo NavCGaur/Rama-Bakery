@@ -11,7 +11,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage('');
-    setError('');
+    setError('');                 
 
     try {
       const response = await axios.post('https://rama-bakery-k92f.vercel.app/api/auth/forgot-password', { email });
@@ -34,6 +34,8 @@ const ForgotPassword = () => {
 
   return (
     <div className="forgotpassword__container">
+      <div className="forgotpassword__formwrapper">
+
       <h2>Forgot Password</h2>
       <form onSubmit={handleSubmit} className="forgotpassword__form">
         <div className="forgotpassword__inputgroup">
@@ -55,6 +57,8 @@ const ForgotPassword = () => {
         {error && <div className="forgotpassword__errormessage">{error}</div>}
         <button type="submit" className="forgotpassword__submit-button">Send Reset Link</button>
       </form>
+
+    </div>
     </div>                      
   );
 };

@@ -30,7 +30,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors({});
-
+                    
     // Client-side password validation
     const passwordErrors = validatePassword(formData.password, formData.confirmPassword);
     if (Object.keys(passwordErrors).length > 0) {

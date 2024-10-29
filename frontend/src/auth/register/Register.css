@@ -13,8 +13,7 @@
     border: 1px solid #A154F2;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    width: 400px;
+    width: 30%;
 }
 
 .register__title {
@@ -39,10 +38,11 @@
 }
 
 .register__forminput {
-    border: 1px solid #9A332E;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #9A332E; 
     border-radius: 4px;
     font-size: 1.8rem;
-    padding: 1rem; 
 }
 
 .register-inputgroup{
@@ -55,7 +55,7 @@
 .register__inputgroup-label{
     font-size: 1.8rem;
     color: black;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .register__submit-button {
