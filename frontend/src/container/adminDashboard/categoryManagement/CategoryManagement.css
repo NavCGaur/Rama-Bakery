@@ -102,13 +102,11 @@ z-index: 30;
 
 
 .categoryManagement__table{
-    width: 90%;
+    width: 60%;
     margin-left: 3rem;
     margin-bottom: 3rem;
     overflow-y: auto;
     
-
-
 }
 
 .categoryManagement__table-sorticon{
