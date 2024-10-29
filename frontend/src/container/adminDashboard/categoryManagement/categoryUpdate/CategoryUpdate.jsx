@@ -7,7 +7,6 @@ function CategoryUpdate({ id, category, isEditing, onEdit, onSave, onCancel }) {
 
   const handleChange = (e) => {
     setEditedName(e.target.value);
-
   };
 
   if (!isEditing) {
@@ -25,6 +24,8 @@ function CategoryUpdate({ id, category, isEditing, onEdit, onSave, onCancel }) {
         </td>
         <td>{id+1}</td>
         <td>{category}</td>
+        <td></td>
+
       </tr>
     );
   }

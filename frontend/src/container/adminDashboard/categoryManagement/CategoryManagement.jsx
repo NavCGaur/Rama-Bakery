@@ -103,7 +103,7 @@ function CategoryManagement() {
           Delete Selected Categories
         </div>
         <div className="categoryManagement__edit" onClick={handleEditClick}>
-          <EditIcon className="categoryManagement__icon" />
+          <EditIcon className="categoryManagement__icon" />                   
           Edit Selected Categories
         </div>
 
@@ -126,7 +126,7 @@ function CategoryManagement() {
             <th>Category</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='categoryManagement__table-body'>
           {categories.map((category, index) => (
             <CategoryUpdate
               key={index}
