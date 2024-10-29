@@ -1,10 +1,10 @@
 .categoryManagement__table-data{
-    width: 60%;
+    width: 100%;
 }
 
 .categoryManagement__table-headrow--editing,
 .categoryManagement__table-data--editing {
-    grid-template-columns:  1fr 1fr 2fr ; 
+    grid-template-columns:  1fr 1fr 2fr 2fr ; 
 }
 .categoryManagement__table-data .categoryUpdate__checkbox  {
     height: 2.4rem;
