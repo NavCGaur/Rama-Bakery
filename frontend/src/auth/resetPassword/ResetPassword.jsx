@@ -65,10 +65,10 @@ const ResetPassword = () => {
                 placeholder="New Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-              />
+              />    
             </div>
             <div className="resetpassword__input-group">
-              <label htmlFor="confirmPassword" className="resetpassword__inputgroup-label">Confirm New Password</label>
+              <label htmlFor="confirmPassword" className="resetpassword__inputgroup-label">Confirm Password</label>
               <input
                 id="confirmPassword"
                 name="confirmPassword"
@@ -81,7 +81,7 @@ const ResetPassword = () => {
               />
             </div>
             <div className="button-group">
-              <button type="submit" className="submit-button">Reset Password</button>
+              <button type="submit" className="resetpassword__submit-button">Reset Password</button>
             </div>
           </form>
         ) : (
